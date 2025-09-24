@@ -1,54 +1,37 @@
-import 'package:anime_app/core/theme/app_colors.dart';
-import 'package:anime_app/core/theme/styles.dart';
-import 'package:anime_app/features/home/presentation/widgets/anime_list.dart';
-import 'package:anime_app/features/home/presentation/widgets/tab_list_items.dart';
-import 'package:anime_app/features/home/presentation/widgets/top_characters_section.dart';
+import 'package:anime_app/core/widgets/bottom_nav_bar.dart';
+import 'package:anime_app/features/home/presentation/widgets/home_screen_body.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  int _selectedIndex = 0;
+  static const List<Widget> _widgetOptions = <Widget>[
+    HomeScreenBody(),
+    HomeScreenBody(),
+    HomeScreenBody(),
+    HomeScreenBody(),
+    HomeScreenBody(),
+  ];
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [AppColors.gridentColor, Colors.white],
-            stops: [.15, 1],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          ),
-        ),
-        child: SafeArea(
-          child: Padding(
-            padding: EdgeInsets.only(top: 10.h, left: 16.0.w),
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Where Anime Comes Alive',
-                    style: AppTextStyles.font24Black,
-                  ),
-                  15.verticalSpace,
-                  TabListItems(),
-                  10.verticalSpace,
-                  AnimeList(),
-                  10.verticalSpace,
-                  TopCharactersSection(),
-                 
-                ],
-              ),
-            ),
-          ),
-        ),
-        
+      body: _widgetOptions.elementAt(_selectedIndex),
+      bottomNavigationBar: BottomNavBar(
+        selectedIndex: _selectedIndex,
+        onItemTapped: _onItemTapped,
       ),
-      // bottomNavigationBar: BottomNavigationBar(items: items),
     );
   }
 }
