@@ -17,8 +17,8 @@ class AnimeListItem extends StatelessWidget {
           borderRadius: BorderRadiusGeometry.circular(8),
           child: Image.asset(
             animeModel.imageUrl,
-            height: 160.h,
-            width: 170.w,
+            height: 200.h,
+            width: 190.w,
             fit: BoxFit.fill,
           ),
         ),

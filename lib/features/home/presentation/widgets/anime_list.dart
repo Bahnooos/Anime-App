@@ -1,3 +1,5 @@
+import 'package:anime_app/core/helpers/extensions.dart';
+import 'package:anime_app/core/routing/routes.dart';
 import 'package:anime_app/features/home/data/anime_model.dart';
 import 'package:anime_app/features/home/presentation/widgets/anime_list_item.dart';
 import 'package:flutter/material.dart';
@@ -21,13 +23,16 @@ class AnimeList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200.h,
+      height: 240.h,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: animeItems.length,
         itemBuilder: (context, index) => Padding(
           padding: EdgeInsetsGeometry.only(right: 8.w),
-          child: AnimeListItem(animeModel: animeItems[index]),
+          child: GestureDetector(
+            onTap: () => context.pushNamed(Routes.detailsScreen),
+            child: AnimeListItem(animeModel: animeItems[index]),
+          ),
         ),
       ),
     );
