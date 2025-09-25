@@ -1,6 +1,7 @@
 import 'package:anime_app/core/routing/routes.dart';
 import 'package:anime_app/features/details/presentation/details_screen.dart';
 import 'package:anime_app/features/home/presentation/home_screen.dart';
+import 'package:anime_app/features/upgrade_plan/presentation/upgrade_plan_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
@@ -13,6 +14,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const HomeScreen());
       case Routes.detailsScreen:
         return MaterialPageRoute(builder: (_) => const DetailsScreen());
+      case Routes.upgradePlanScreen:
+        return MaterialPageRoute(builder: (_) => const UpgradePlanScreen());
       default:
         return null;
     }
