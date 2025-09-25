@@ -12,16 +12,16 @@ class DetailsHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.sizeOf(context).height * .63,
+      height: MediaQuery.sizeOf(context).height * .66,
       child: Stack(
         children: [
           SizedBox(
-            height: MediaQuery.sizeOf(context).height * .55,
+            height: MediaQuery.sizeOf(context).height * .59,
             width: double.infinity,
             child: Image.asset(AppImages.detailsImage, fit: BoxFit.cover),
           ),
           Positioned(
-            top: 263.h,
+            top: 295.h,
             left: 0,
             right: 0,
             child: Container(
@@ -34,7 +34,7 @@ class DetailsHeader extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 260.h,
+            top: 292.h,
             left: 0,
             right: -50,
             child: SvgPicture.asset(Svgs.ellipse, height: 132.h),
@@ -43,7 +43,7 @@ class DetailsHeader extends StatelessWidget {
           Align(
             alignment: Alignment.center,
             child: Padding(
-              padding: EdgeInsets.only(top: 290.h),
+              padding: EdgeInsets.only(top: 318.h),
               child: Column(
                 children: [
                   Text(

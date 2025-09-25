@@ -14,10 +14,11 @@ class DetailsStatisticsSection extends StatelessWidget {
         Divider(
           color: AppColors.bottonAnimeTypeColor,
           thickness: .5,
-          indent: 10,
-          endIndent: 10,
+          height: 10,
+          indent: 25,
+          endIndent: 15,
         ),
-        10.verticalSpace,
+        5.verticalSpace,
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: List.generate(
@@ -31,8 +32,9 @@ class DetailsStatisticsSection extends StatelessWidget {
         Divider(
           color: AppColors.bottonAnimeTypeColor,
           thickness: .5,
-          indent: 10,
-          endIndent: 10,
+          height: 10,
+          indent: 25,
+          endIndent: 15,
         ),
       ],
     );
