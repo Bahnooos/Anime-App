@@ -6,6 +6,13 @@ Anime App is a beautifully designed mobile application that brings the world of 
 
 ---
 
+## CLean Architecture
+
+<img width="627" height="746" alt="Screenshot 2025-03-15 023922" src="https://github.com/user-attachments/assets/d208ec39-db11-4192-8aea-dc494d50e3e1" />
+
+
+---
+
 ## Features
 
 - **Discover Popular Anime:** Browse through categories like Trending, Popular, and New to find the hottest anime titles.
@@ -89,3 +96,4 @@ Contributions, issues, and feature requests are welcome!
 ---
 
 **Experience the ultimate anime streaming platform—where anime comes alive!**
+
